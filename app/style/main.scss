@@ -15,7 +15,7 @@
   --normal-color: #3bd672;
   --error-color: #de484a;
   --warn-color: #f39c12;
-  --unknown-color: #7f8c8d;
+  --unknown-color: #eee;
   // 深色模式
   &.dark-mode {
     --main-bg-color: rgb(36, 36, 36);
@@ -58,4 +58,26 @@ body {
 
 .n-back-top {
   z-index: 9999;
+}
+
+// add
+header, footer {
+  display: none!important;
+}
+nav {
+  position: relative!important;
+  &,button {
+    color: #5D5A59!important;
+    .dark-mode & {
+      color: #B7B7C4!important;
+    }
+  }
+}
+:root {
+  --unknown-color: #eee;
+}
+:root.dark-mode {
+  --main-bg-color: #191919;
+  --main-card-color: #1E1E1F;
+  --unknown-color: #333;
 }
